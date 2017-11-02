@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
     res.send('Hey')
 })
 
-app.ge('/webhook/', function(req, res) {
+app.get('/webhook/', function(req, res) {
     if (req.query['hub.challenge'] == 'jack-byte') {
         res.send(req.query['hub.challenge'])
     }
@@ -21,5 +21,5 @@ app.ge('/webhook/', function(req, res) {
 })
 
 app.listen(app.get('port'), function() {
-    
+    console.log('wrong token');
 })
